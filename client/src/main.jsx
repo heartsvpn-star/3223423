@@ -3485,11 +3485,9 @@ function App() {
 								<div className="asset-warning-icon">
 									<AlertCircle size={28} />
 								</div>
-								<h2>Game integration unavailable</h2>
+								<h2>БАЗА ДАННЫХ НЕ НАЙДЕНА</h2>
 								<p>
-									Game assets or libraries have not been
-									integrated. Please join our Discord server
-									to download the game assets and libraries.
+									Game assets or libraries have not been.
 								</p>
 								<div className="asset-game-name">
 									{missingGameTitle}
