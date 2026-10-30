@@ -9,6 +9,7 @@ import {installStarlightChristmasServer} from './game/starlightChristmas.js';
 import {installAztecGemsDeluxeServer} from './game/aztecGemsDeluxe.js';
 assertRuntimeConfig();
 const app=express();
+app.set('trust proxy', 1);
 const bannerDir=path.resolve('uploads','banners'); fs.mkdirSync(bannerDir,{recursive:true});
 const bannerUpload=multer({
   storage: multer.memoryStorage(),
