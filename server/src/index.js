@@ -43,7 +43,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'X-CSRF-Token', 'Idempotency-Key'],
 }));
 app.use(express.json({ limit: '32kb', strict: true }));
-app.set('trust proxy', 1);
 app.use(express.urlencoded({ extended: false, limit: '32kb', parameterLimit: 100 }));
 app.use(cookieParser());
 
