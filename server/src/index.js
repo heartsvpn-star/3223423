@@ -56,13 +56,13 @@ app.use('/game', gameLimiter);
 
 app.get('/api/auth/csrf', (req, res) => {
   const token = randomBytes(32).toString('base64url');
-  res.cookie('zy_csrf', token, {
-    httpOnly: false,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
-    path: '/',
-    maxAge: 2 * 60 * 60 * 1000,
-  });
+res.cookie('zy_csrf', token, {
+  httpOnly: false,
+  secure: true,                 // обязательно true
+  sameSite: 'none',             // важно!
+  path: '/',
+  maxAge: 2 * 60 * 60 * 1000,
+});
   res.set('Cache-Control', 'no-store');
   res.json({ csrfToken: token });
 });
