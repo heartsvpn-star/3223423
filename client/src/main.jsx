@@ -1104,7 +1104,7 @@ function App() {
 					<Menu size={18} />
 				</button>
 				<button className="brand" onClick={() => setPage("Lobby")}>
-					ZYVALLE<span>BET</span>
+					ТВОЯ ИГРА<span>BET</span>
 				</button>
 				<div className="top-actions">
 					<label className="searchbox">
@@ -1207,7 +1207,7 @@ function App() {
 				)}
 				<aside className="sidebar">
 					<div className="promo-mini">
-						<small>ZYVALLE EXCLUSIVE</small>
+						<small>ТВОЯ ИГРА EXCLUSIVE</small>
 						<strong>
 							YOUR GAME.
 							<br />
@@ -1322,7 +1322,7 @@ function App() {
 								<small>Stay in control</small>
 							</span>
 						</div>
-						<small className="version">ZYVALLE BET · v1.0</small>
+						<small className="version">ТВОЯ ИГРА BET · ТВОЙ МОМЕНТ.</small>
 					</div>
 				</aside>
 				<main className="main">
@@ -3285,7 +3285,7 @@ function App() {
 					)}
 					<footer className="footer">
 						<div className="footer-brand">
-							ZYVALLE<span>BET</span>
+							ТВОЯ ИГРА<span>BET</span>
 							<p>
 								A premium game lobby experience.
 								<br />
@@ -3335,7 +3335,7 @@ function App() {
 							</a>
 						</div>
 						<div className="footer-bottom">
-							© 2026 Zyvalle Bet. All rights reserved.{" "}
+							© 2026 Твоя игра Bet. All rights reserved.{" "}
 							<span>18+ · Play responsibly</span>
 						</div>
 					</footer>
@@ -3392,7 +3392,7 @@ function App() {
 						{modal === "login" || modal === "register" ? (
 							<>
 								<div className="modal-logo">
-									ZYVALLE<span>BET</span>
+									ТВОЯ ИГРА<span>BET</span>
 								</div>
 								<h2>
 									{modal === "register"
@@ -3401,7 +3401,7 @@ function App() {
 								</h2>
 								<p>
 									{modal === "register"
-										? "Join the Zyvalle community."
+										? "Join the твоя community."
 										: "Sign in to access your wallet and account."}
 								</p>
 								<form onSubmit={authSubmit}>
@@ -3463,7 +3463,7 @@ function App() {
 								<div className="modal-switch">
 									{modal === "register"
 										? "Already have an account?"
-										: "New to Zyvalle?"}{" "}
+										: "New to твоя игра?"}{" "}
 									<button
 										onClick={() => {
 											setModal(
