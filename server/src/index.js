@@ -233,7 +233,14 @@ app.post('/api/auth/register',asyncRoute(async(req,res)=>{const schema=z.object(
   [u.insertId, 'USD']
 );await conn.commit();const user=await getUser(u.insertId);res.cookie('zy_session',signUser(user),cookieOptions).status(201).json({user});}catch(e){await conn.rollback();throw e;}finally{conn.release();}}));
 app.post('/api/auth/login',asyncRoute(async(req,res)=>{const v=z.object({email:z.string().email().max(190),password:z.string().min(1).max(72)}).safeParse(req.body);if(!v.success)return res.status(400).json({error:'Invalid email or password.'});const rows=await query('SELECT id,password_hash,role,status FROM users WHERE email=? LIMIT 1',[v.data.email.toLowerCase()]);const u=rows[0];if(!u||u.status!=='active'||!(await bcrypt.compare(v.data.password,u.password_hash)))return res.status(401).json({error:'Incorrect email or password.'});const user=await getUser(u.id);res.cookie('zy_session',signUser(user),cookieOptions).json({user});}));
-app.post('/api/auth/logout',(req,res)=>res.cookie('zy_session', signUser(user), cookieOptions).json({ ok: true, user });.json({ok:true}));
+app.post('/api/auth/logout', (req, res) => {
+    res.clearCookie('zy_session', {
+        httpOnly: true,
+        secure: true,       // Render использует HTTPS
+        sameSite: 'none',   // Обязательно для кросс-доменных запросов
+        path: '/'
+    }).json({ ok: true });
+});
 app.get('/api/auth/me',optionalAuth,asyncRoute(async(req,res)=>{if(!req.auth)return res.json({authenticated:false,user:null,wallet:{balance:0,currency:'USD'}});const user=await getUser(req.auth.id);if(!user||user.status!=='active'){res.clearCookie('zy_session',{httpOnly:true,secure:process.env.NODE_ENV==='production',sameSite:'lax',path:'/'});return res.json({authenticated:false,user:null,wallet:{balance:0,currency:'USD'}});}const rows=await query('SELECT balance,currency FROM wallets WHERE user_id=?',[user.id]);res.json({authenticated:true,user,wallet:rows[0]||{balance:0,currency:'USD'}});}));
 app.get('/api/deposit-methods',asyncRoute(async(req,res)=>{await ensureDepositMethods();const methods=await query('SELECT id,method_key,name,enabled,instructions,payment_details,sort_order FROM deposit_methods WHERE enabled=1 ORDER BY sort_order,id');res.json({methods:methods.map(m=>({...m,enabled:!!Number(m.enabled)}))});}));
 app.get('/api/admin/deposit-methods',requireAuth,requireAdmin,asyncRoute(async(req,res)=>{await ensureDepositMethods();const methods=await query('SELECT id,method_key,name,enabled,instructions,payment_details,sort_order,updated_at FROM deposit_methods ORDER BY sort_order,id');res.json({methods:methods.map(m=>({...m,enabled:!!Number(m.enabled)}))});}));
