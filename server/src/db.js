@@ -3,7 +3,7 @@ import 'dotenv/config';
 
 const connectionConfig = {
   host: process.env.DATABASE_HOST || '127.0.0.1',
-  port: Number(process.env.DATABASE_PORT || 3306),
+  port: Number(process.env.DATABASE_PORT || 4000),
   user: process.env.DATABASE_USER || 'root',
   password: process.env.DATABASE_PASSWORD || '',
   database: process.env.DATABASE_NAME || 'zyvalle_bet',
@@ -11,6 +11,9 @@ const connectionConfig = {
   decimalNumbers: true,
   timezone: 'Z',
   charset: 'utf8mb4',
+  ssl: {
+    rejectUnauthorized: true
+  }
 };
 
 export const pool = mysql.createPool({ ...connectionConfig, connectionLimit: 10 });
