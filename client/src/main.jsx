@@ -32,7 +32,7 @@ import {
 import "./style.css";
 import { ASSET_GAME_CATALOG, ASSET_PROVIDER_CATALOG } from "./asset-catalog.js";
 const API = (
-	import.meta.env.VITE_API_URL || "http://localhost:4000/api"
+	import.meta.env.VITE_API_URL || "https://zyvalle-api.onrender.com/api"
 ).replace(/\/$/, "");
 let csrfToken = "";
 async function ensureCsrfToken() {
