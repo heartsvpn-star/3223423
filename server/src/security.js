@@ -6,8 +6,11 @@ const production = process.env.NODE_ENV === 'production';
 
 export const cookieOptions = {
   httpOnly: true,
+  // Cross-origin frontend (zyvalle-casino.onrender.com) + API (zyvalle-api.onrender.com)
+  // requires SameSite=None + Secure, otherwise the browser will not send zy_session
+  // on fetch(..., { credentials: 'include' }) and the user appears logged out immediately.
   secure: production,
-  sameSite: 'lax',
+  sameSite: production ? 'none' : 'lax',
   path: '/',
   maxAge: 7 * 24 * 60 * 60 * 1000,
 };
