@@ -788,7 +788,7 @@ function App() {
 			);
 			setUser(d.user);
 			setModal("");
-			setNotice("Welcome to Zyvalle Bet.");
+			setNotice("Добро пожаловать в Горыныч Бет.");
 			const gameToOpen = pendingGame;
 			setPendingGame(null);
 			refresh();
@@ -1105,7 +1105,7 @@ function App() {
 					<Menu size={18} />
 				</button>
 				<button className="brand" onClick={() => setPage("Lobby")}>
-					ТВОЯ ИГРА<span>BET</span>
+					ГОРЫНЫЧ<span>БЕТ</span>
 				</button>
 				<div className="top-actions">
 					<label className="searchbox">
@@ -1208,11 +1208,11 @@ function App() {
 				)}
 				<aside className="sidebar">
 					<div className="promo-mini">
-						<small>ТВОЯ ИГРА EXCLUSIVE</small>
+						<small>ГОРЫНЫЧ EXCLUSIVE</small>
 						<strong>
-							YOUR GAME.
+							ТВОЯ ИГРА.
 							<br />
-							YOUR MOMENT.
+							ТВОЙ МОМЕНТ.
 						</strong>
 						<span>
 							ENTER THE LOBBY <ArrowUpRight size={12} />
@@ -1323,7 +1323,7 @@ function App() {
 								<small>Stay in control</small>
 							</span>
 						</div>
-						<small className="version">ТВОЯ ИГРА BET · ТВОЙ МОМЕНТ.</small>
+						<small className="version">ГОРЫНЫЧ БЕТ · ТВОЙ МОМЕНТ.</small>
 					</div>
 				</aside>
 				<main className="main">
@@ -1667,7 +1667,7 @@ function App() {
 							<div className="page-heading">
 								<div>
 									<small>YOUR ACCOUNT</small>
-									<h1>Welcome back, {user?.name}</h1>
+									<h1>С возвращением, {user?.name}</h1>
 								</div>
 								<button
 									className="register-btn"
@@ -3286,9 +3286,9 @@ function App() {
 					)}
 					<footer className="footer">
 						<div className="footer-brand">
-							ТВОЯ ИГРА<span>BET</span>
+							ГОРЫНЫЧ<span>БЕТ</span>
 							<p>
-								A premium game lobby experience.
+								Легендарное казино. Три головы — тройные победы.
 								<br />
 								Play responsibly. 18+ only.
 							</p>
@@ -3336,7 +3336,7 @@ function App() {
 							</a>
 						</div>
 						<div className="footer-bottom">
-							© 2026 Твоя игра Bet. All rights reserved.{" "}
+							© 2026 Горыныч Бет. Все права защищены.{" "}
 							<span>18+ · Play responsibly</span>
 						</div>
 					</footer>
@@ -3393,16 +3393,16 @@ function App() {
 						{modal === "login" || modal === "register" ? (
 							<>
 								<div className="modal-logo">
-									ТВОЯ ИГРА<span>BET</span>
+									ГОРЫНЫЧ<span>БЕТ</span>
 								</div>
 								<h2>
 									{modal === "register"
-										? "Create your account"
-										: "Welcome back"}
+										? "Создать аккаунт"
+										: "С возвращением"}
 								</h2>
 								<p>
 									{modal === "register"
-										? "Join the твоя community."
+										? "Присоединяйся к легенде Горыныча."
 										: "Sign in to access your wallet and account."}
 								</p>
 								<form onSubmit={authSubmit}>
