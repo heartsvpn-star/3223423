@@ -1248,14 +1248,14 @@ function App() {
 							</svg>
 						</div>
 						<div className="promo-mini-copy">
-							<small>EXCLUSIVE</small>
+							<small>ГОРЫНЫЧ EXCLUSIVE</small>
 							<strong>
 								ТРИ ГОЛОВЫ —
 								<br />
 								ТРОЙНОЙ ВЫИГРЫШ
 							</strong>
 							<span>
-								<ArrowUpRight size={12} />
+								ВОЙТИ В ЛОББИ <ArrowUpRight size={12} />
 							</span>
 						</div>
 					</div>
