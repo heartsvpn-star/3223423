@@ -227,7 +227,7 @@ html{scrollbar-color:#263b48 #090b12;scrollbar-width:thin;scroll-behavior:smooth
     width: auto !important; height: 64px !important; min-height: 64px !important;
     padding: 5px !important; margin: 0 !important;
     border: 1px solid #293442 !important; border-radius: 17px !important;
-    background: rgba(14, 18, 28, .96) !important;
+    background: rgba(10, 7, 5, .96) !important;
     box-shadow: 0 12px 36px #000a, inset 0 1px #ffffff08 !important;
     backdrop-filter: blur(18px);
     z-index: 40 !important;
@@ -340,7 +340,7 @@ html{scrollbar-color:#263b48 #090b12;scrollbar-width:thin;scroll-behavior:smooth
 
 /* Favorite game state */
 .favorite{display:flex;align-items:center;justify-content:center;z-index:3;cursor:pointer;transition:color .18s ease,background .18s ease,border-color .18s ease}
-.favorite.is-favorite{color:#ffd76a!important;border-color:rgba(39,231,239,.75)!important;background:rgba(12,214,229,.16)!important}
+.favorite.is-favorite{color:#ffd76a!important;border-color:rgba(232,185,35,.75)!important;background:rgba(232,185,35,.16)!important}
 .favorite:focus-visible{outline:2px solid #ffd76a;outline-offset:2px}
 
 /* Gates of Olympus overlay: additive styles, preserving the existing Zyvalle template */
@@ -503,3 +503,51 @@ html{scrollbar-color:#263b48 #090b12;scrollbar-width:thin;scroll-behavior:smooth
 .game-card-actions{gap:6px;}
 .game-art>.rtp-overlay{top:7px;bottom:auto;left:7px;right:auto;}
 @media(max-width:820px){.game-art .game-card-actions>.favorite{opacity:1!important;visibility:visible!important;}}
+
+
+/* ===== Gorynych: force warm mobile bottom bar (must be last) ===== */
+@media (max-width: 820px) {
+  nav.mobile-tabs,
+  nav.mobile-tabs.mobile-tabs,
+  .mobile-tabs {
+    background: #0a0705 !important;
+    background-color: #0a0705 !important;
+    border: 1px solid rgba(232, 185, 35, 0.28) !important;
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+  nav.mobile-tabs button,
+  .mobile-tabs button,
+  .mobile-tabs > button {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #9a8a70 !important;
+    border: 1px solid transparent !important;
+  }
+  nav.mobile-tabs button svg,
+  .mobile-tabs button svg {
+    color: #9a8a70 !important;
+    stroke: #9a8a70 !important;
+  }
+  nav.mobile-tabs button.active,
+  .mobile-tabs button.active,
+  nav.mobile-tabs button:first-child.active,
+  .mobile-tabs button:first-child.active,
+  .mobile-tabs button:first-child {
+    background: linear-gradient(160deg, #2a1f16, #16110c) !important;
+    background-color: #1a140f !important;
+    color: #ffd76a !important;
+    border: 1px solid rgba(232, 185, 35, 0.45) !important;
+  }
+  nav.mobile-tabs button.active svg,
+  .mobile-tabs button.active svg,
+  .mobile-tabs button:first-child svg {
+    color: #ffd76a !important;
+    stroke: #ffd76a !important;
+  }
+  nav.mobile-tabs button:active,
+  .mobile-tabs button:active {
+    background: #1f1812 !important;
+    color: #ffd76a !important;
+  }
+}
