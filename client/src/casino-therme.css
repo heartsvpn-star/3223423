@@ -245,3 +245,86 @@ input:focus, textarea:focus, select:focus {
   width: 28px;
   height: 28px;
 }
+
+
+/* Kill remaining cool/blue surfaces — Gorynych warm palette */
+.provider-card, .provider-row > *, [class*="provider"] button,
+.provider-row a, .providers-grid > * {
+  background: #14100c !important;
+  border-color: rgba(232, 185, 35, 0.14) !important;
+  color: #e8dcc8 !important;
+}
+.provider-card:hover, .provider-row > *:hover {
+  border-color: rgba(232, 185, 35, 0.4) !important;
+  background: #1a140f !important;
+  box-shadow: 0 0 20px rgba(232, 185, 35, 0.08) !important;
+}
+
+.safe, .sidebar-bottom .safe, [class*="play-responsibly"], .sidebar-bottom button {
+  background: #14100c !important;
+  border: 1px solid rgba(232, 185, 35, 0.22) !important;
+  color: #c4a574 !important;
+}
+.safe span, .safe small {
+  color: #8a7a65 !important;
+}
+
+.icon-btn, .menu, button.icon-btn {
+  background: #1a140f !important;
+  color: #a8977a !important;
+  border: 1px solid transparent;
+}
+.icon-btn:hover, .menu:hover {
+  color: #ffd76a !important;
+  background: #241c14 !important;
+  border-color: rgba(232, 185, 35, 0.25) !important;
+}
+
+.side-toggle, .side-toggle button {
+  background: #0a0705 !important;
+  color: #a8977a !important;
+}
+.side-toggle button.active {
+  background: #1a140f !important;
+  color: #ffd76a !important;
+}
+
+.category-pills button, .tabs button {
+  background: #14100c !important;
+  border-color: rgba(232, 185, 35, 0.12) !important;
+  color: #a8977a !important;
+}
+.category-pills button.active, .tabs button.active {
+  background: linear-gradient(145deg, #2a1f16, #1a140f) !important;
+  color: #ffd76a !important;
+  border-color: rgba(232, 185, 35, 0.45) !important;
+}
+
+.searchbox {
+  background: #14100c !important;
+  border-color: rgba(232, 185, 35, 0.18) !important;
+  color: #8a7a65 !important;
+}
+
+.empty, .table-wrap, .wallet-panel, .stat-card {
+  background: #120e0a !important;
+  border-color: rgba(232, 185, 35, 0.12) !important;
+  color: #d4c4a8 !important;
+}
+
+.footer {
+  border-top: 1px solid rgba(232, 185, 35, 0.12) !important;
+  background: #0a0705 !important;
+}
+
+/* mobile bottom tabs */
+.mobile-tabs {
+  background: #0e0a07 !important;
+  border-top: 1px solid rgba(232, 185, 35, 0.15) !important;
+}
+.mobile-tabs button {
+  color: #8a7a65 !important;
+}
+.mobile-tabs button.active {
+  color: #ffd76a !important;
+}
