@@ -1207,16 +1207,57 @@ function App() {
 					/>
 				)}
 				<aside className="sidebar">
-					<div className="promo-mini">
-						<small>ГОРЫНЫЧ EXCLUSIVE</small>
-						<strong>
-							ТРИ ГОЛОВЫ.
-							<br />
-							ТРОЙНЫЕ ПОБЕДЫ.
-						</strong>
-						<span>
-							ВОЙТИ В ЛОББИ <ArrowUpRight size={12} />
-						</span>
+					<div
+						className="promo-mini"
+						role="button"
+						tabIndex={0}
+						onClick={() => {
+							setMobileSidebarOpen(false);
+							setPage("Lobby");
+							setCategory("Lobby");
+						}}
+						onKeyDown={(e) => {
+							if (e.key === "Enter" || e.key === " ") {
+								e.preventDefault();
+								setMobileSidebarOpen(false);
+								setPage("Lobby");
+								setCategory("Lobby");
+							}
+						}}
+					>
+						<div className="promo-mini-dragon" aria-hidden="true">
+							<svg viewBox="0 0 64 64" width="52" height="52">
+								<defs>
+									<linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+										<stop offset="0%" stopColor="#ffe08a" />
+										<stop offset="55%" stopColor="#e8b923" />
+										<stop offset="100%" stopColor="#a67c14" />
+									</linearGradient>
+								</defs>
+								{/* center head */}
+								<path fill="url(#gGold)" d="M32 8c-2.2 0-4 3.5-4.5 7.2-.4 2.8.2 5.5 1.2 7.2L26 28l6 4 6-4-2.7-5.6c1-.1.7 1.7 4.4 1.2 3.7.5 7.2-2.3 7.2-4.5 0-3.8-4.8-8-12-8z" />
+								<path fill="#0a0705" d="M29.2 18.5c.6 0 1.1.7 1.1 1.4s-.5 1.2-1.1 1.2-1.1-.5-1.1-1.2.5-1.4 1.1-1.4zm5.6 0c.6 0 1.1.7 1.1 1.4s-.5 1.2-1.1 1.2-1.1-.5-1.1-1.2.5-1.4 1.1-1.4z" />
+								{/* left head */}
+								<path fill="url(#gGold)" d="M14 22c-3.5 1-6 4.2-6 7.5 0 2.2 1.2 4.2 3.1 5.3L8 42l7 2 3-7c2.1.3 4-1 5.1-3.1 1.5-2.8.6-6.5-2.6-8.4-2.2-1.3-4.6-1.7-6.5-1.5z" />
+								<circle cx="13.5" cy="30" r="1.2" fill="#0a0705" />
+								{/* right head */}
+								<path fill="url(#gGold)" d="M50 22c3.5 1 6 4.2 6 7.5 0 2.2-1.2 4.2-3.1 5.3L56 42l-7 2-3-7c-2.1.3-4-1-5.1-3.1-1.5-2.8-.6-6.5 2.6-8.4 2.2-1.3 4.6-1.7 6.5-1.5z" />
+								<circle cx="50.5" cy="30" r="1.2" fill="#0a0705" />
+								{/* body hint */}
+								<path fill="url(#gGold)" opacity=".85" d="M24 34c2 6 4 12 8 16 4-4 6-10 8-16l-4 3-4-1-4 1-4-3z" />
+							</svg>
+						</div>
+						<div className="promo-mini-copy">
+							<small>ГОРЫНЫЧ EXCLUSIVE</small>
+							<strong>
+								ТРИ ГОЛОВЫ —
+								<br />
+								ТРОЙНОЙ ВЫИГРЫШ
+							</strong>
+							<span>
+								ВОЙТИ В ЛОББИ <ArrowUpRight size={12} />
+							</span>
+						</div>
 					</div>
 					<div className="side-label">GAMES</div>
 					{[
