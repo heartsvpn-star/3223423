@@ -328,3 +328,45 @@ input:focus, textarea:focus, select:focus {
 .mobile-tabs button.active {
   color: #ffd76a !important;
 }
+
+
+/* Mobile bottom nav — warm Gorynych, no blue */
+.mobile-tabs {
+  background: rgba(10, 7, 5, 0.94) !important;
+  border: 1px solid rgba(232, 185, 35, 0.22) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(232, 185, 35, 0.06) !important;
+  backdrop-filter: blur(16px) !important;
+}
+.mobile-tabs button {
+  background: transparent !important;
+  color: #8a7a65 !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+}
+.mobile-tabs button svg {
+  color: inherit !important;
+  stroke: currentColor !important;
+}
+.mobile-tabs button.active,
+.mobile-tabs button:first-child.active {
+  color: #ffd76a !important;
+  background: linear-gradient(145deg, #2a1f16, #1a140f) !important;
+  border-color: rgba(232, 185, 35, 0.4) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 215, 106, 0.08), 0 0 16px rgba(232, 185, 35, 0.12) !important;
+}
+.mobile-tabs button:active,
+.mobile-tabs button:focus-visible {
+  background: #1f1812 !important;
+  color: #ffd76a !important;
+}
+/* category chips on mobile */
+.category-pills button {
+  background: #14100c !important;
+  color: #a8977a !important;
+  border: 1px solid rgba(232, 185, 35, 0.14) !important;
+}
+.category-pills button.active {
+  background: linear-gradient(145deg, #e8b923, #a67c14) !important;
+  color: #1a1005 !important;
+  border-color: transparent !important;
+}
