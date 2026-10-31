@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState, useRef } from "react";
+import './casino-theme.css';
 import { createRoot } from "react-dom/client";
 import {
 	Menu,
