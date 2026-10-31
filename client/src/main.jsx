@@ -1210,12 +1210,12 @@ function App() {
 					<div className="promo-mini">
 						<small>ГОРЫНЫЧ EXCLUSIVE</small>
 						<strong>
-							ТВОЯ ИГРА.
+							ТРИ ГОЛОВЫ.
 							<br />
-							ТВОЙ МОМЕНТ.
+							ТРОЙНЫЕ ПОБЕДЫ.
 						</strong>
 						<span>
-							ENTER THE LOBBY <ArrowUpRight size={12} />
+							ВОЙТИ В ЛОББИ <ArrowUpRight size={12} />
 						</span>
 					</div>
 					<div className="side-label">GAMES</div>
@@ -3290,7 +3290,7 @@ function App() {
 							<p>
 								Легендарное казино. Три головы — тройные победы.
 								<br />
-								Play responsibly. 18+ only.
+								Играй ответственно. 18+.
 							</p>
 						</div>
 						<div>
@@ -3300,7 +3300,7 @@ function App() {
 							<a
 								onClick={() =>
 									setNotice(
-										"Support has not been configured yet.",
+										"Поддержка пока не настроена.",
 									)
 								}
 							>
@@ -3328,7 +3328,7 @@ function App() {
 							<a
 								onClick={() =>
 									setNotice(
-										"Responsible gaming: set limits and never gamble with money needed for essentials.",
+										"Играй ответственно: устанавливай лимиты и не играй на деньги, нужные для жизни.",
 									)
 								}
 							>
@@ -3337,7 +3337,7 @@ function App() {
 						</div>
 						<div className="footer-bottom">
 							© 2026 Горыныч Бет. Все права защищены.{" "}
-							<span>18+ · Play responsibly</span>
+							<span>18+ · Играй ответственно</span>
 						</div>
 					</footer>
 				</main>
