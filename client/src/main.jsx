@@ -30,6 +30,7 @@ import {
 	Trash2,
 } from "lucide-react";
 import "./style.css";
+import "./casino-therme.css";
 import { ASSET_GAME_CATALOG, ASSET_PROVIDER_CATALOG } from "./asset-catalog.js";
 const API = (
 	import.meta.env.VITE_API_URL || "https://zyvalle-api.onrender.com/api"
