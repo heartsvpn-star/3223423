@@ -1,174 +1,156 @@
-/* Zyvalle Casino — casino color theme overrides */
+/* Горыныч Бет — dark fantasy casino theme (banner-matched) */
 :root {
-  --casino-bg: #0a0705;
-  --casino-panel: #16110c;
-  --casino-panel-elevated: #1c150f;
-  --casino-gold: #f5b82e;
+  --casino-bg: #050302;
+  --casino-panel: #120c08;
+  --casino-panel-elevated: #1a120c;
+  --casino-gold: #e8b923;
   --casino-gold-bright: #ffd76a;
-  --casino-gold-dim: #c4921f;
-  --casino-text: #f5e9d5;
-  --casino-muted: #8a7a65;
-  --casino-border: rgba(245, 184, 46, 0.28);
-  --casino-danger: #e23a40;
-  --casino-success: #2fbb7a;
-  --casino-felt: #0d3b2a;
-
-  /* Map legacy accent */
+  --casino-gold-dim: #a67c14;
+  --casino-crimson: #8b1518;
+  --casino-ruby: #c41e3a;
+  --casino-lava: #ff4d1a;
+  --casino-text: #f5e6c8;
+  --casino-muted: #8a7355;
+  --casino-border: rgba(232, 185, 35, 0.32);
   --cyan: var(--casino-gold);
   --muted: var(--casino-muted);
   --panel: var(--casino-panel);
-  --line: #2a2118;
+  --line: #2a1c10;
 }
 
 body {
-  background: var(--casino-bg);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 21, 24, 0.18), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(232, 185, 35, 0.06), transparent 50%),
+    var(--casino-bg) !important;
   color: var(--casino-text);
 }
 
-/* Primary / CTA buttons */
-.btn-primary, .button-primary, .primary-button,
-.register-btn, [class*="primaryButton"], [class*="primary-button"] {
-  color: #1a1005;
-  background: linear-gradient(135deg, #ffd76a, #f5b82e 45%, #c4921f);
-  border: 1px solid rgba(255, 215, 106, 0.45);
-  box-shadow: 0 0 22px rgba(245, 184, 46, 0.28);
+.topbar {
+  background: rgba(8, 5, 3, 0.94) !important;
+  border-bottom: 1px solid rgba(232, 185, 35, 0.22) !important;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.55), 0 1px 0 rgba(232, 185, 35, 0.08);
 }
 
-.btn-primary:hover, .register-btn:hover {
-  background: linear-gradient(135deg, #ffe08a, #ffd76a 45%, #f5b82e);
-  filter: brightness(1.05);
+.brand, .footer-brand, .modal-logo {
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+  color: var(--casino-gold-bright) !important;
+  text-shadow: 0 0 24px rgba(232, 185, 35, 0.35);
+}
+.brand span, .footer-brand span, .modal-logo span {
+  color: #ffd76a !important;
+  background: linear-gradient(135deg, #ffd76a, #e8b923, #a67c14);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.btn-secondary, .button-secondary, .secondary-button,
-[class*="secondaryButton"], [class*="secondary-button"],
+.sidebar {
+  background: #0a0705 !important;
+  border-right: 1px solid rgba(232, 185, 35, 0.14) !important;
+}
+
+.side-link.active,
+[class*="side-link"].active {
+  background: linear-gradient(145deg, #2a1810, #1a1008) !important;
+  border-color: rgba(232, 185, 35, 0.45) !important;
+  box-shadow: inset 0 -2px 0 var(--casino-gold), 0 0 18px rgba(232, 185, 35, 0.12) !important;
+  color: var(--casino-gold-bright) !important;
+}
+
+.register-btn, .btn-primary, [class*="register-btn"] {
+  color: #1a1005 !important;
+  background: linear-gradient(135deg, #ffe08a 0%, #e8b923 40%, #a67c14 100%) !important;
+  border: 1px solid rgba(255, 215, 106, 0.5) !important;
+  box-shadow: 0 0 28px rgba(232, 185, 35, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+  font-weight: 800 !important;
+}
+.register-btn:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 0 36px rgba(232, 185, 35, 0.5) !important;
+}
+
 .login-btn, .secondary-btn {
-  color: var(--casino-gold-bright);
-  background: #21150e;
-  border: 1px solid var(--casino-border);
+  color: var(--casino-gold-bright) !important;
+  background: #1a120c !important;
+  border: 1px solid var(--casino-border) !important;
 }
 
-.btn-danger, .button-danger, .danger-button,
-[class*="dangerButton"], [class*="danger-button"] {
-  color: #fff;
-  background: linear-gradient(135deg, #e23a40, #8f111e);
-  border: 1px solid rgba(255, 100, 100, 0.4);
+.user-pill, .balance {
+  background: #1a120c !important;
+  color: var(--casino-gold-bright) !important;
+  border: 1px solid rgba(232, 185, 35, 0.2);
 }
 
-/* Inputs and forms */
-input, textarea, select,
-.input, .form-control,
-[class*="input"], [class*="Input"],
-[class*="select"], [class*="Select"] {
-  color: var(--casino-text);
-  background-color: #0d0a08;
-  border: 1px solid rgba(245, 184, 46, 0.22);
-  border-radius: 10px;
+.hero, .promo-mini, [class*="hero"] {
+  border-color: rgba(232, 185, 35, 0.25) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), inset 0 0 60px rgba(139, 21, 24, 0.08);
 }
 
-input::placeholder, textarea::placeholder {
-  color: #877762;
-}
-
-input:focus, textarea:focus, select:focus {
-  border-color: var(--casino-gold);
-  box-shadow: 0 0 0 3px rgba(245, 184, 46, 0.12);
-  outline: none;
-}
-
-/* Headings and highlighted amounts */
-h1, h2, h3, h4,
-.section-title, .page-title {
-  color: var(--casino-gold-bright);
-  letter-spacing: -0.02em;
+h1, h2, h3, .section-title, .page-title {
+  color: var(--casino-gold-bright) !important;
 }
 
 .price, .balance, .amount, .jackpot,
-[class*="balance"], [class*="Balance"],
-[class*="jackpot"], [class*="Jackpot"] {
-  color: var(--casino-gold-bright);
-  font-variant-numeric: tabular-nums;
+[class*="balance"], [class*="jackpot"] {
+  color: var(--casino-gold-bright) !important;
 }
 
-/* Badges, chips, labels */
-.badge, .chip, .tag,
-[class*="badge"], [class*="Badge"],
-[class*="chip"], [class*="Chip"] {
-  border-color: var(--casino-border);
+input, textarea, select, .input, .form-control {
+  color: var(--casino-text) !important;
+  background-color: #0d0906 !important;
+  border: 1px solid rgba(232, 185, 35, 0.22) !important;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--casino-gold) !important;
+  box-shadow: 0 0 0 3px rgba(232, 185, 35, 0.15) !important;
 }
 
-.badge, .tag, [class*="badge"], [class*="Badge"] {
-  color: var(--casino-gold-bright);
-  background: rgba(245, 184, 46, 0.10);
+.modal, dialog, [role="dialog"] {
+  background: linear-gradient(165deg, #1a120c 0%, #0e0a06 100%) !important;
+  border: 1px solid rgba(232, 185, 35, 0.35) !important;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.75), 0 0 40px rgba(139, 21, 24, 0.15) !important;
 }
 
-/* Tables and separators */
-table {
-  color: var(--casino-text);
-  border-color: var(--casino-border);
+.category-pills button.active,
+.tab.active {
+  background: linear-gradient(135deg, #2a1810, #1a1008) !important;
+  color: var(--casino-gold-bright) !important;
+  border-color: var(--casino-gold) !important;
 }
 
-th {
-  color: var(--casino-gold-bright);
-  background: #21150e;
+.game-card, [class*="game-card"] {
+  border-color: rgba(232, 185, 35, 0.12) !important;
+  background: #120c08 !important;
+}
+.game-card:hover {
+  border-color: rgba(232, 185, 35, 0.45) !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(232, 185, 35, 0.12) !important;
 }
 
-td, th {
-  border-color: rgba(245, 184, 46, 0.14);
+.status-approved, .status-active {
+  color: #2fbb7a !important;
+}
+.status-pending {
+  color: var(--casino-gold) !important;
+}
+.status-rejected {
+  color: var(--casino-ruby) !important;
 }
 
-hr, .divider {
-  border-color: var(--casino-border);
+/* subtle crimson accent line under topbar brand area */
+.topbar::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 30, 58, 0.5), rgba(232, 185, 35, 0.6), rgba(196, 30, 58, 0.5), transparent);
+  pointer-events: none;
 }
-
-/* Dialogs, dropdowns and popovers */
-dialog, [role="dialog"], [role="menu"],
-.dropdown-menu, .popover, .modal,
-[class*="dropdown"], [class*="Dropdown"] {
-  color: var(--casino-text);
-  background: #17100c;
-  border: 1px solid var(--casino-border);
-  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.65);
-}
-
-/* Tabs */
-[role="tablist"] {
-  border-bottom: 1px solid var(--casino-border);
-}
-
-[role="tab"][aria-selected="true"],
-.tab.active, .tabs .active {
-  color: var(--casino-gold-bright);
-  border-color: var(--casino-gold);
-}
-
-/* Progress bars */
-progress, [role="progressbar"] {
-  accent-color: var(--casino-gold);
-}
-
-/* Selection / active states */
-.active, .selected, [aria-current="page"] {
-  border-color: rgba(245, 184, 46, 0.65);
-}
-
-.side-link.active {
-  background: linear-gradient(145deg, #2a1f16, #1c150f);
-  border-color: #3a2e20;
-  box-shadow: inset 0 -2px 0 var(--casino-gold);
-  color: var(--casino-gold-bright);
-}
+.topbar { position: sticky; }
 
 :disabled, [aria-disabled="true"] {
+  opacity: 0.5;
   cursor: not-allowed;
-  opacity: 0.52;
-}
-
-/* Respect reduced-motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-  }
 }
