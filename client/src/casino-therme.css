@@ -154,3 +154,94 @@ input:focus, textarea:focus, select:focus {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+
+/* Promo card — Gorynych with dragon mark */
+.promo-mini {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-height: 108px !important;
+  height: auto !important;
+  padding: 12px 12px 12px 10px !important;
+  margin: 0 0 22px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(232, 185, 35, 0.35) !important;
+  background:
+    radial-gradient(ellipse 90% 80% at 0% 50%, rgba(232, 185, 35, 0.18), transparent 55%),
+    radial-gradient(ellipse 70% 60% at 100% 0%, rgba(139, 21, 24, 0.35), transparent 50%),
+    linear-gradient(145deg, #1a120c 0%, #0a0705 70%) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 215, 106, 0.06), 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  cursor: pointer;
+  overflow: hidden !important;
+}
+.promo-mini:hover {
+  border-color: rgba(255, 215, 106, 0.55) !important;
+  box-shadow: 0 0 28px rgba(232, 185, 35, 0.18), inset 0 0 0 1px rgba(255, 215, 106, 0.1) !important;
+}
+.promo-mini:after {
+  content: "" !important;
+  position: absolute !important;
+  width: 90px !important;
+  height: 90px !important;
+  right: -30px !important;
+  bottom: -40px !important;
+  border: 1px solid rgba(232, 185, 35, 0.2) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 10px rgba(232, 185, 35, 0.04) !important;
+  pointer-events: none !important;
+  background: none !important;
+}
+.promo-mini-dragon {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 0 10px rgba(232, 185, 35, 0.45));
+}
+.promo-mini-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 1;
+}
+.promo-mini small {
+  color: #c4a574 !important;
+  letter-spacing: 1.4px !important;
+  font-size: 8px !important;
+}
+.promo-mini strong {
+  color: #ffe8a8 !important;
+  font-size: 15px !important;
+  line-height: 1.05 !important;
+  letter-spacing: 0.2px !important;
+  text-shadow: 0 0 18px rgba(232, 185, 35, 0.25);
+}
+.promo-mini span {
+  color: var(--casino-gold) !important;
+  font-size: 8px !important;
+  margin-top: 2px !important;
+}
+.sidebar-collapsed .promo-mini {
+  justify-content: center !important;
+  padding: 8px !important;
+  min-height: 48px !important;
+}
+.sidebar-collapsed .promo-mini-copy {
+  display: none !important;
+}
+.sidebar-collapsed .promo-mini:before {
+  content: none !important;
+}
+.sidebar-collapsed .promo-mini-dragon {
+  width: 28px;
+  height: 28px;
+}
+.sidebar-collapsed .promo-mini-dragon svg {
+  width: 28px;
+  height: 28px;
+}
